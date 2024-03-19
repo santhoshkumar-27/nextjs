@@ -13,9 +13,12 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>
+      }
       const app = document.getElementById('app');
       const root = ReactDOM.createRoot(app);
-      root.render(<h1>Develop. Preview. Ship.</h1>);
+      root.render(<Header/>);
     </script>
 </body>
 
