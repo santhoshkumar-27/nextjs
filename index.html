@@ -15,9 +15,7 @@
   <script type="text/jsx">
     const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
-    function handleClick() {
-      console.log("increment like count")
-    }
+
     function createTitle(title) {
       if (title) {
         return title;
@@ -29,6 +27,12 @@
         return <h1>{title ? title : 'Default Title'}</h1>;
       }
       function HomePage() {
+
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick() {
+          setLikes(likes + 1);
+        }
         return (
           <div>
           {/* Nesting the Header component */}
@@ -39,7 +43,7 @@
             ))}
           </ul>
           {/* <button  onClick={handleClick}>Like</button> */}
-          <button  onClick={() => handleClick()}>Like</button>
+          <button  onClick={() => handleClick()}>Like {likes}</button>
         </div>
         );
       }
