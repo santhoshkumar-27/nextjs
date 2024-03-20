@@ -13,13 +13,13 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/jsx">
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>
+      function Header({ title }) {
+        return <h1>{title}</h1>
       }
       function HomePage() {
         return (<div>
           {/* Nesting the Header component */}
-          <Header/>
+          <Header title="nameaaaa"/>
         </div>);
       }
       const app = document.getElementById('app');
