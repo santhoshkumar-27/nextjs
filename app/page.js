@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import LikeButton from './LikeButton';
 
 function Header({ title }) {
